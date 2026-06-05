@@ -1,0 +1,130 @@
+# PaperClip Community Agents — portable company package (schema: paperclip/v1)
+#
+# Add a single shared agent (with its skills) to your own company:
+#   ./add-agent.sh --company-id <your-company-id> --agent <slug>
+#
+# Or import directly with the CLI (the script wraps this and installs skills first):
+#   npx paperclipai company import ./ --target existing \
+#     --company-id <your-company-id> --include agents --agents <slug>
+#
+# Per-agent skills and reporting links live in each agents/<slug>/AGENTS.md
+# frontmatter (skills:, reportsTo:). This file carries the non-prose extension
+# fields (role, icon, adapter, runtime, budget) keyed by agent slug. COMPANY.md
+# at the package root is required by the importer.
+
+schema: "paperclip/v1"
+agents:
+  research-engineer:
+    role: "researcher"
+    icon: "telescope"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  code-reviewer:
+    role: "engineer"
+    icon: "radar"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  devops-engineer:
+    role: "devops"
+    icon: "rocket"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  content-writer:
+    role: "general"
+    icon: "file-code"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  graphic-designer:
+    role: "general"
+    icon: "sparkles"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  video-creator:
+    role: "general"
+    icon: "sparkles"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+  proxops:
+    role: "devops"
+    icon: "cpu"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
+sidebar:
+  agents:
+    - "research-engineer"
+    - "code-reviewer"
+    - "devops-engineer"
+    - "content-writer"
+    - "graphic-designer"
+    - "video-creator"
+    - "proxops"
