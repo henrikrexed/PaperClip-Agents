@@ -1,0 +1,62 @@
+site_name: PaperClip Agents — Community Crew
+site_description: A community-shareable catalog of production Paperclip AI agents from IsItObservable Labs. Each page documents an agent's role, skills, and how to add it to your own Paperclip organization.
+site_url: https://henrikrexed.github.io/PaperClip-Agents/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/henrikrexed/PaperClip-Agents
+repo_name: henrikrexed/PaperClip-Agents
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Adding an Agent: adding-an-agent.md
+  - Agents:
+    - Overview: agents/index.md
+    - Research Engineer: agents/research-engineer.md
+    - Code Reviewer: agents/code-reviewer.md
+    - DevOps Engineer: agents/devops-engineer.md
+    - Content Writer: agents/content-writer.md
+    - Graphic Designer: agents/graphic-designer.md
+    - Video Creator: agents/video-creator.md
+    - ProxOps: agents/proxops.md
+  - BMAD Crew: bmad-crew.md
