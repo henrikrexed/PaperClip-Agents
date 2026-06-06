@@ -20,7 +20,8 @@
 #   --company-id <id>     Target Paperclip company UUID (or set PAPERCLIP_COMPANY_ID).
 #   --agent <slug>        Agent to add. Repeat for multiple. Available slugs:
 #                           research-engineer, code-reviewer, devops-engineer,
-#                           content-writer, graphic-designer, video-creator, proxops
+#                           content-writer, graphic-designer, video-creator,
+#                           proxops, challenger
 #   --ceo-agent-id <id>   If set, prints the command to re-parent each added agent
 #                         under your existing manager/CEO agent.
 #   --skills-repo <url>   Extra upstream skills repo to import (repeatable). Use this
@@ -37,7 +38,7 @@
 
 set -euo pipefail
 
-AVAILABLE_AGENTS="research-engineer code-reviewer devops-engineer content-writer graphic-designer video-creator proxops"
+AVAILABLE_AGENTS="research-engineer code-reviewer devops-engineer content-writer graphic-designer video-creator proxops challenger"
 
 COMPANY_ID="${PAPERCLIP_COMPANY_ID:-}"
 CEO_AGENT_ID=""

@@ -28,6 +28,7 @@ From the cloned repo:
 | `graphic-designer` | [Graphic Designer](agents/graphic-designer.md) |
 | `video-creator` | [Video Creator](agents/video-creator.md) |
 | `proxops` | [ProxOps](agents/proxops.md) |
+| `challenger` | [Challenger](agents/challenger.md) |
 
 ### Example
 
