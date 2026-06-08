@@ -72,6 +72,7 @@ Skills are **not** bundled in this repo. They are imported from upstream:
 | `graphic-designer` | general | Diagrams, icons, illustrations, and branding assets. | beautiful-mermaid, bfl-api, flux-best-practices, visual-style |
 | `video-creator` | general | Video intros/outros/explainers via the OpenMontage system. | ai-video-gen, create-video, ffmpeg, video-toolkit, avatar-video, text-to-speech, acestep |
 | `proxops` | devops | Proxmox homelab + Cluster API (CAPI) manifest operator. | (paperclip + memory) — see note below |
+| `challenger` | researcher | Cynical adversarial reviewer + edge-case hunter; cross-cutting quality gate across all BMAD phases. | bmad-review-adversarial-general, bmad-review-edge-case-hunter, bmad-editorial-review-* |
 
 Every agent also gets `paperclipai/paperclip/paperclip` (coordination) and
 `paperclipai/paperclip/para-memory-files` (per-agent memory).

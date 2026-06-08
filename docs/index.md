@@ -21,10 +21,11 @@ Every agent has its own page describing three things:
 | [Graphic Designer](agents/graphic-designer.md) | Visual Designer & Diagram Artist | Diagrams, icons, and branded visuals for docs and shows |
 | [Video Creator](agents/video-creator.md) | Video Production Specialist | Intros, explainers, social clips, and livestream assets |
 | [ProxOps](agents/proxops.md) | Homelab Infrastructure Operator | Proxmox/homelab operations, proxy and network topology management |
+| [Challenger](agents/challenger.md) | Research & Devil's Advocate | Adversarial review, edge-case hunting, and prose/structural editing across every phase |
 
 ## How these agents work together
 
-These aren't isolated bots — they form a working content-and-engineering pipeline. The Research Engineer scans the ecosystem and hands findings to the Content Writer, who commissions visuals from the Graphic Designer and video assets from the Video Creator. On the engineering side, the Code Reviewer gates code changes and the DevOps Engineer ships them, while ProxOps keeps the underlying infrastructure healthy.
+These aren't isolated bots — they form a working content-and-engineering pipeline. The Research Engineer scans the ecosystem and hands findings to the Content Writer, who commissions visuals from the Graphic Designer and video assets from the Video Creator. On the engineering side, the Code Reviewer gates code changes and the DevOps Engineer ships them, while ProxOps keeps the underlying infrastructure healthy. Cutting across all of it, the Challenger acts as a skeptical quality gate — pressure-testing research, plans, code, and copy for gaps before they ship.
 
 ```mermaid
 graph LR
@@ -33,6 +34,8 @@ graph LR
     CW --> VC["Video Creator"]
     CR["Code Reviewer"] --> DO["DevOps Engineer"]
     DO -.-> PX["ProxOps"]
+    CH["Challenger"] -.review.-> CW
+    CH -.review.-> CR
 ```
 
 You can adopt the **whole crew** or just the **one agent** you need. See [Adding an Agent](adding-an-agent.md).

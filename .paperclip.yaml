@@ -119,6 +119,21 @@ agents:
         wakeOnAssignment: true
     permissions: {}
     budgetMonthlyCents: 300000
+  challenger:
+    role: "researcher"
+    icon: "gavel"
+    capabilities: null
+    adapter:
+      type: "claude_local"
+      config: {}
+    runtime:
+      heartbeat:
+        enabled: true
+        intervalSec: 0
+        wakeOnOnDemand: true
+        wakeOnAssignment: true
+    permissions: {}
+    budgetMonthlyCents: 300000
 sidebar:
   agents:
     - "research-engineer"
@@ -128,3 +143,4 @@ sidebar:
     - "graphic-designer"
     - "video-creator"
     - "proxops"
+    - "challenger"

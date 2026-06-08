@@ -1,6 +1,6 @@
 # Agents Overview
 
-This catalog contains seven production agents from IsItObservable Labs. Each is shareable on its own — adopt the full crew or just the one you need.
+This catalog contains eight production agents from IsItObservable Labs. Each is shareable on its own — adopt the full crew or just the one you need.
 
 ## Roster
 
@@ -13,6 +13,7 @@ This catalog contains seven production agents from IsItObservable Labs. Each is 
 | [Graphic Designer](graphic-designer.md) | Visual Designer & Diagram Artist | Content Writer | Diagrams, icons, branded visuals |
 | [Video Creator](video-creator.md) | Video Production Specialist | Content Writer | Intros, explainers, social clips, livestream assets |
 | [ProxOps](proxops.md) | Homelab Infrastructure Operator | CEO | Proxmox/homelab ops, proxy & network topology |
+| [Challenger](challenger.md) | Research & Devil's Advocate | cross-cutting | Adversarial review, edge-case hunting, prose & structural editing |
 
 ## Skills by agent
 
@@ -27,6 +28,7 @@ Every agent receives the two core Paperclip skills — **`paperclip`** (control-
 | Graphic Designer | `beautiful-mermaid`, `d3-viz`, `design-guide`, FLUX image generation (`bfl-api` / `flux-best-practices`) |
 | Video Creator | OpenMontage pipelines, `ffmpeg`, `elevenlabs` / `music` / `acestep` (audio), `manim-composer`, `ai-video-gen` |
 | ProxOps | Proxmox/homelab ops, Gateway API routing, cluster manifest tooling |
+| Challenger | `bmad-review-adversarial-general`, `bmad-review-edge-case-hunter`, `bmad-editorial-review-prose`, `bmad-editorial-review-structure`, MemPalace systemic-issue tracking |
 
 !!! tip "Skills are the authoritative install list"
     Each agent's own `AGENTS.md` declares the skills it uses. The [add flow](../adding-an-agent.md) installs those skills before importing the agent, so references always resolve.
@@ -46,9 +48,12 @@ graph TD
     CW --> VC["Video Creator"]
     EM --> CR["Code Reviewer"]
     EM --> DO["DevOps Engineer"]
+    CH["Challenger"]
+    CH -.review.-> CW
+    CH -.review.-> EM
 ```
 
-The reporting lines above reflect how the crew runs at IsItObservable Labs. When you import a single agent, you can re-parent it under your own manager — see [Adding an Agent](../adding-an-agent.md#attach-the-agent-to-your-org-chart).
+The Challenger is a **cross-cutting quality gate** rather than a fixed report — the dotted lines show it reviewing work across teams. The solid reporting lines above reflect how the rest of the crew runs at IsItObservable Labs. When you import a single agent, you can re-parent it under your own manager — see [Adding an Agent](../adding-an-agent.md#attach-the-agent-to-your-org-chart).
 
 ## A shared shape
 
